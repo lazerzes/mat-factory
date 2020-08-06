@@ -1,13 +1,35 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "version": 1, 
+  "version": 1,
   "newProjectRoot": "projects",
   "projects": {
     "mat-factory": {
       "projectType": "library",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss",
+          "inlineStyle": true,
+          "skipTests": true
+        },
+        "@schematics/angular:service": {
+          "skipTests": true
+        },
+        "@schematics/angular:class": {
+          "skipTests": true
+        },
+        "@schematics/angular:directive": {
+          "skipTests": true
+        },
+        "@schematics/angular:module": {
+          "routing": true
+        },
+        "@schematics/angular:pipe": {
+          "skipTests": true
+        }
+      },
       "root": "projects/mat-factory",
       "sourceRoot": "projects/mat-factory/src",
-      "prefix": "lib",
+      "prefix": "mat-factory",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-ng-packagr:build",
@@ -42,6 +64,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "mat-factory"
+    }
+  },
+  "defaultProject": "mat-factory",
+  "cli": {
+    "analytics": "612251b4-c0a0-4d67-996a-5935227708db"
+  }
 }

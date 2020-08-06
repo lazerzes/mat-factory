@@ -5,12 +5,14 @@
       true,
       "attribute",
       "lib",
+      "mat-factory",
       "camelCase"
     ],
     "component-selector": [
       true,
       "element",
       "lib",
+      "mat-factory",
       "kebab-case"
     ]
   }
